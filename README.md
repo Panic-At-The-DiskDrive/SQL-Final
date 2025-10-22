@@ -13,25 +13,46 @@
    ```
 
 ## Objetivos
-+ Deberás entregar los avances correspondiente a la segunda entrega de tu proyecto final, incluyendo lo presentado y ajustado en la primera entrega.
++ Crear una base de datos relacional, basada en un modelo de negocio.
+
++ Desarrollar objetos que permitan el mantenimiento de la base de datos.
+
++ Implementar consultas SQL que permitan la generación de informes.
 
 ## Requisitos
-+ Listado de Vistas más una descripción detallada, su objetivo, y qué tablas las componen.
+1) La base de datos debe contener al menos:  
 
-+ Listado de Funciones que incluyan una descripción detallada, el objetivo para la cual fueron creadas y qué datos o tablas manipulan y/o son implementadas.
++ 15 tablas, entre las cuales debe haber al menos 1 tabla de hechos,  2 tablas transaccionales.
++ 5 vistas..
++ 2 funciones    
++ 2 stored procedure.
++ 2 trigger 
+  
+2) El documento debe contener:  
 
-+ Listado de Stored Procedures con una descripción detallada, qué objetivo o beneficio aportan al proyecto, y las tablas que lo componen y/o tablas con las que interactúa.
-
-+ Un archivo .sql que contenga:
-
-1) Script de inserción de datos en las bases.
-
-2) Si se insertan datos mediante importación, agregar el paso a paso de éste en el DOC PDF más los archivos con el contenido a importar, en el formato que corresponda.
-
-3) Script de creación de Vistas, Funciones, Stored Procedures y Triggers.
++ Introducción
++ Objetivo
++ Situación problemática
++ Modelo de negocio
++ Diagrama de entidad relación
++ Listado de tablas con descripción de estructura (columna, descripción, tipo de datos, tipo de clave)
++ Scripts de creación de cada objeto de la base de datos
++ Scripts de inserción de datos
++ Informes generados en base a la información de la base
++ Herramientas y tecnologías usadas
++ Futuras líneas
 
 ## Recomendaciones
-+ Permitir comentarios en el archivo.
+1)  Permitir comentarios en el archivo.
+
+2) SCRIPT: 
+
++ Tablas
++ Vistas
++ Funciones
++ Store procedure
++ Trigger
++ Inserción de datos
 
 ## Contenidos adicionales  
 
@@ -41,26 +62,30 @@
 
 ### Criterios de evaluación
 + Funcional
-Presenta la documentación en formato PDF solicitada, la cual muestra toda la información referida a su proyecto.
 
-1) Junto al contenido original, se adiciona el listado de Vistas creadas a partir de las tablas de su proyecto, su descripción, objetivos de uso, y qué tablas componen dichas Vistas.
+1) Presenta la documentación en formato PDF solicitada, la cual muestra toda la información referida a su proyecto final. Incluye un Sumario inicial el cual brinda un panorama general de todo el contenido del documento PDF y hasta permite acceder a cada apartado a través de un hipervínculo. La sección Introducción contiene todo lo referente a la explicación de su proyecto final. Es conciso y no tiene párrafos de relleno. La sección Objetivo, tiene un detalle de lo que el proyecto busca cubrir en dicho apartado, reverenciando al proyecto en sí y a las diferentes aristas que son cross-funcional al mismo (información contable, de logística, analítica, etcétera).
 
-2) También se detalla el listado de Funciones personalizadas, su descripción, objetivos de uso, y qué tablas las conforman o qué función aplican sobre la información.
+2) El apartado Situación Problemática describe correctamente la necesidad de implementar una base de datos sobre el modelo de proyecto elegido y qué brechas puede solucionar a través de dicha implementación. El apartado Modelo de Negocio describe la información abstracta de la organización que utiliza esta solución. Esta descripción puede estar realizada en un modelo textual o a través de uno o más gráficos, siendo cualquiera de estos coincidentes con el proyecto presentado.
 
-3) Se incluye el listado de Stored Procedures creados, con su descripción, los objetivos de uso, y qué tablas lo componen o sobre cuáles tablas impacta el uso de éstos.
+3) El diagrama E-R (Entidad-Relación) representa de manera fiel la estructura de base de datos que visualizamos a través del Esquema generado a partir de los archivos .SQL. Despliega las diferentes Entidades incluidas en el proyecto y sus relaciones, coincidiendo todo con la información generada a partir del Script de creación del Esquema. El Diagrama E-R fue presentado en formato gráfico dentro del documento PDF o en un archivo externo acompañando la documentación, y fue explicado o mencionado dentro del documento PDF. <---------------> El apartado Listado de Tablas representa de manera fiel todas las Entidades incluidas en el script de creación del Esquema de datos. Por cada Entidad se encuentran descritos cada uno de sus campos (o columnas), el tipo de datos de cada uno de éstos, y el tipo de clave utilizado. También se combinan las claves únicas, foráneas e índices en aquellas tablas (Entidades) que las requieren.
 
-4) Se detalla el listado de Triggers creados, una descripción de su funcionalidad, objetivos y/o sobre qué tablas y/o situaciones se accionan.
-
-5) Todas las secciones agregadas son concisas y no tienen párrafos de relleno.
-
-6) El resto de la información anterior, se mantiene fiel respecto a su primera presentación parcial, o se incluyeron mejoras o detalle de tablas adicionales que se crearon a partir de nuevos conocimientos adquiridos.
+4) Los Stored Procedures y Funciones creadas por el estudiante cuentan con una mínima descripción que explica su funcionalidad.
 
 + Tecnico:
-Se incluye un script del tipo archivo .SQL, cuyo nombre referencia qué función cumple.
 
-1) Se ejecuta el script inicial de creación de Vistas, Stored Procedures, Triggers y Funciones Personalizadas sin presentar problemas al ejecutarse. El script genera correctamente los objetos de bb.dd. descritos en el documento presentado.
+1) Se incluyen dos scripts del tipo archivo .SQL, cuyos nombres referencian claramente qué función cumple cada uno de ellos.
 
-2) Se ejecuta el segundo script, el cual genera registros en las tablas de datos para luego poder ejecutar Stored Procedures, Funciones personalizadas, Vistas y/o disparar Triggers y llegar a resultados óptimos a partir de los registros generados.
+2) Se ejecuta el script inicial (creación de objetos de la bb.dd.) y el mismo no presenta problemas (arroja errores) al ejecutarse. Este script de creación genera correctamente todas las entidades en la base de datos, y sus diferentes relaciones. Además se incluyen en el esquema de bb.dd. (15 o + tablas, dentro de estas 1 tabla de Hechos, 2 tablas transaccionales, 5 o + Vistas, 2 o + Stored Procedures, 2 o + Triggers, 2 o + Funciones creadas por el estudiante).
+
+3) Se ejecuta el segundo script del proyecto (inserción de registros) y el mismo no presenta problemas (no arroja errores) al ejecutarse. El script de inserción genera correctamente información (registros) en cada una de las tablas (Entidades). Dicha información es concisa y no esta repetida con el mero hecho de generar volumen de datos. Posterior  al proceso de inserción de datos, se ejecutan las Vistas y Stored Procedures, los cuales brindan información resultante en pantalla a partir de los datos generados.  
+  
++ Analítico:
+
+1) El estudiante utilizó una herramienta de analítica de datos para extraer información de su modelo de datos generado. Armó un informe donde refleja un análisis a partir de la información generada en su bb.dd.
+
+2) Dicho informe se presenta en un archivo PDF independiente o está incluido en el documento PDF funcional y explica mínimamente qué datos fueron analizados.
+
+3) El informe fue generado a partir de una aplicación de software como ser Microsoft Excel, Tableau, Microsoft Power BI, u otra aplicación de software similar.  
 
 ---
 
